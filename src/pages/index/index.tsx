@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 import { View, Button, Text } from '@tarojs/components'
 import { observer, inject } from 'mobx-react'
+import {AtButton} from 'taro-ui'
 
 import './index.less'
 
@@ -47,6 +48,11 @@ class Index extends Component {
     counterStore.incrementAsync()
   }
 
+  tabBarClick = (index) => {
+    console.log('index', index);
+    console.log('0000000000000000000');
+  }
+
   render () {
     const { counterStore: { counter } } = this.props.store
     return (
@@ -55,6 +61,8 @@ class Index extends Component {
         <Button onClick={this.decrement}>-</Button>
         <Button onClick={this.incrementAsync}>Add Async</Button>
         <Text>{counter}</Text>
+        <Text>我的测试页面</Text>
+        <AtButton type='primary'>按钮文案</AtButton>
       </View>
     )
   }

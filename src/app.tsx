@@ -4,6 +4,7 @@ import { Provider } from 'mobx-react'
 import counterStore from './store/counter'
 
 import './app.less'
+import 'taro-ui/dist/style/index.scss' // 引入组件样式 - 方式一
 
 const store = {
   counterStore
